@@ -1,7 +1,7 @@
 === My Permalink Demo ===
 Contributors: PerS
 Donate link: http://soderlind.no/donate/
-Tags:  flush_rewrite_rules, generate_rewrite_rules, parse_request, permalink_structure, query_vars, wp_rewrite 
+Tags:  permalink, rewrite rules, flush_rewrite_rules, generate_rewrite_rules, parse_request, permalink_structure, query_vars, wp_rewrite 
 Requires at least: 3.4
 Tested up to: 3.4.2
 Stable tag: trunk
