@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Demo plugin to show how to implement a custom permalink for your plugin
+Demo plugin to show how to add a custom permalink to your plugin
 
 == Description ==
 
