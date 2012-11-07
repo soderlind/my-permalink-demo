@@ -1,4 +1,4 @@
-=== My Permalink Demo plugin ===
+=== My Permalink Demo ===
 Contributors: PerS
 Donate link: http://soderlind.no/donate/
 Tags:  flush_rewrite_rules, generate_rewrite_rules, parse_request, permalink_structure, query_vars, wp_rewrite 
