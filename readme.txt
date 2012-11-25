@@ -25,6 +25,7 @@ You can [view the plugin source](http://soderlind.no/archives/2012/11/01/wordpre
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
-
+= 1.0.1 =
+* Fixed a bug in my_permalink_url() that gave 404 for blogs in a subdirectory.
 = 1.0.0 =
 * Initial release

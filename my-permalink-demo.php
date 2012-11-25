@@ -3,7 +3,7 @@
 Plugin Name: My Permalink Demo
 Plugin URI: http://soderlind.no/archives/2012/11/01/wordpress-plugins-and-permalinks-how-to-use-pretty-links-in-your-plugin/
 Description: Demo plugin to show how to implement your custom permalink for your plugin. To test, add the [mypermalink] or [mypermalink val="ipsum"] shortcode to a page or post.
-Version: 1.0.0
+Version: 1.0.1
 Author: Per Soderlind
 Author URI: http://soderlind.no/
 */
@@ -48,9 +48,9 @@ if (!class_exists('my_permalink')) {
          **************************************************************************/
         function my_permalink_url($val) {
             if ( get_option('permalink_structure')) { // check if the blog has a permalink structure
-                return sprintf("/my-permalink/%s",$val);
+                return sprintf("%s/my-permalink/%s",home_url(),$val);
             } else {
-                return sprintf("/index.php?my_permalink_variable_01=%s",$val);
+                return sprintf("%s/index.php?my_permalink_variable_01=%s",home_url(),$val);
             }
         }
  
