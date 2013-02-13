@@ -3,7 +3,7 @@
 Plugin Name: My Permalink Demo
 Plugin URI: http://soderlind.no/archives/2012/11/01/wordpress-plugins-and-permalinks-how-to-use-pretty-links-in-your-plugin/
 Description: Demo plugin to show how to implement your custom permalink for your plugin. To test, add the [mypermalink] or [mypermalink val="ipsum"] shortcode to a page or post.
-Version: 1.0.1
+Version: 1.0.2
 Author: Per Soderlind
 Author URI: http://soderlind.no/
 */
@@ -123,6 +123,7 @@ if (!class_exists('my_permalink')) {
          * @see http://codex.wordpress.org/Rewrite_API/flush_rules
          **************************************************************************/
         function my_permalink_flush_rewrite_rules() {
+            $rules = $GLOBALS['wp_rewrite']->wp_rewrite_rules();
             if ( ! isset( $rules['my-permalink/(.*)$'] ) ) { // must be the same rule as in my_permalink_rewrite_rule($wp_rewrite)
                 global $wp_rewrite;
                 $wp_rewrite->flush_rules();
