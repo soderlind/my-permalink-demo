@@ -3,7 +3,7 @@ Contributors: PerS
 Donate link: http://soderlind.no/donate/
 Tags:  permalink, rewrite rules, flush_rewrite_rules, generate_rewrite_rules, parse_request, permalink_structure, query_vars, wp_rewrite 
 Requires at least: 3.4
-Tested up to: 3.5
+Tested up to: 3.5.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,8 @@ You can [view the plugin source](http://soderlind.no/archives/2012/11/01/wordpre
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+= 1.0.2=
+* Thanks to [Paul](http://soderlind.no/read-offline/comment-page-1/#comment-209996), the plugin now only flushes the rewrite rules when needed.
 = 1.0.1 =
 * Fixed a bug in my_permalink_url() that gave 404 for blogs in a subdirectory.
 = 1.0.0 =
