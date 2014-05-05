@@ -3,25 +3,25 @@
 Plugin Name: My Permalink Demo
 Plugin URI: http://soderlind.no/archives/2012/11/01/wordpress-plugins-and-permalinks-how-to-use-pretty-links-in-your-plugin/
 Description: Demo plugin to show how to implement your custom permalink for your plugin. To test, add the [mypermalink] or [mypermalink val="ipsum"] shortcode to a page or post.
-Version: 1.0.2
+Version: 1.0.3
 Author: Per Soderlind
 Author URI: http://soderlind.no/
 */
- 
+
 if (!class_exists('my_permalink')) {
     class my_permalink {
- 
+
         function __construct(){
             // demo shortcode
             add_shortcode('mypermalink', array(&$this,'my_permalink_demo_shortcode'));
- 
+
             // permalink hooks:
             add_filter('generate_rewrite_rules', array(&$this,'my_permalink_rewrite_rule'));
             add_filter('query_vars', array(&$this,'my_permalink_query_vars'));
             add_filter('admin_init', array(&$this, 'my_permalink_flush_rewrite_rules'));
             add_action("parse_request", array(&$this,"my_permalink_parse_request"));
         }
- 
+
         /**************************************************************************
          * Demo shortcode
          * A simple shortcode used to demonstrate the plugin.
@@ -37,7 +37,7 @@ if (!class_exists('my_permalink')) {
             ), $atts));
             return sprintf('<a href="%s">My permalink</a>',$this->my_permalink_url($val));
         }
- 
+
         /**************************************************************************
          * Create your URL
          * If the blog has a permalink structure, a permalink is returned. Otherwise
@@ -53,7 +53,7 @@ if (!class_exists('my_permalink')) {
                 return sprintf("%s/index.php?my_permalink_variable_01=%s",home_url(),$val);
             }
         }
- 
+
         /**************************************************************************
          * Add your rewrite rule.
          * The rewrite rules array is an associative array with permalink URLs as regular
@@ -74,11 +74,11 @@ if (!class_exists('my_permalink')) {
                  'my-permalink/([^/]+)/([^.]+).html$' => sprintf("index.php?my_permalink_variable_01=%s&my_permalink_variable_02=%s",$wp_rewrite->preg_index(1),$wp_rewrite->preg_index(2))
                  */
             );
- 
+
             $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
             return $wp_rewrite->rules;
         }
- 
+
         /**************************************************************************
          * Add your custom query variables.
          * To make sure that our parameter value(s) gets saved,when WordPress parse the URL,
@@ -98,7 +98,7 @@ if (!class_exists('my_permalink')) {
             */
             return $query_vars;
         }
- 
+
         /**************************************************************************
          * Parses a URL into a query specification
          * This is where you should add your code.
@@ -114,7 +114,7 @@ if (!class_exists('my_permalink')) {
                 exit(0);
             }
         }
- 
+
         /**************************************************************************
          * Flushes the permalink structure.
          * flush_rules is an extremely costly function in terms of performance, and
@@ -131,7 +131,7 @@ if (!class_exists('my_permalink')) {
         }
     } //End Class
 } //End if class exists statement
- 
+
 if (class_exists('my_permalink')) {
     $my_permalink_var = new my_permalink();
 }

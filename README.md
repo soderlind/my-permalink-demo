@@ -4,8 +4,8 @@
 **Donate link:** http://soderlind.no/donate/  
 **Tags:**  permalink, rewrite rules, flush_rewrite_rules, generate_rewrite_rules, parse_request, permalink_structure, query_vars, wp_rewrite   
 **Requires at least:** 3.4  
-**Tested up to:** 3.5.1  
-**Stable tag:** trunk  
+**Tested up to:** 3.9  
+**Stable tag:** 1.0.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -30,6 +30,8 @@ You can [view the plugin source](http://soderlind.no/archives/2012/11/01/wordpre
 
 ## Changelog ##
 
+### 1.0.3 ###
+* Tested with WordPress 3.9, bumped version number
 
 ### 1.0.2 ###
 * Thanks to [Paul](http://soderlind.no/read-offline/comment-page-1/#comment-209996), the plugin now only flushes the rewrite rules when needed.
