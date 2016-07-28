@@ -3,8 +3,8 @@ Contributors: PerS
 Donate link: http://soderlind.no/donate/
 Tags:  permalink, rewrite rules, flush_rewrite_rules, generate_rewrite_rules, parse_request, permalink_structure, query_vars, wp_rewrite
 Requires at least: 3.4
-Tested up to: 4.5
-Stable tag: 1.1.0
+Tested up to: 4.6
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,8 @@ You can [view the plugin source](http://soderlind.no/archives/2012/11/01/wordpre
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+= 1.1.1 =
+* Tested & found compatible with WP 4.6.
 = 1.1.0 =
 * Update plugin for [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/).
 * Tested & found compatible with WP 4.5.
