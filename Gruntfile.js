@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 	 */
 	svn_files_list = [
 		'readme.txt',
-		'my-permalink-demo.php',
+		'my-permalink-demo.php'
 	];
 
 	/**
@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 	git_files_list = svn_files_list.concat([
 		'README.md',
 		'package.json',
-		'Gruntfile.js',
+		'Gruntfile.js'
 	]);
 
 	// Project configuration.
@@ -61,7 +61,7 @@ module.exports = function (grunt) {
 				expand: true,
 				src:  svn_files_list,
 				dest: 'build/<%= pkg.name %>/tags/<%= pkg.version %>/'
-			},
+			}
 
 		},
 		gittag: {
@@ -144,7 +144,7 @@ module.exports = function (grunt) {
 				dest: 'http://plugins.svn.wordpress.org/<%= pkg.name %>',
 				tmp: 'build/make_svn'
 			}
-		},
+		}
 	});
 
 
